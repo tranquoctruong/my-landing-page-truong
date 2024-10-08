@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Truong Market</title>
+		
+		<!-- Load Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:900Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+		<link href="css/styles.css" rel="stylesheet">
+		
+		<!-- Add Smooth Scrolling to all nav-bar Links -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		  $("a").on('click', function(event) {
+			if (this.hash !== "") {
+			  event.preventDefault();
+			  
+			  var hash = this.hash;
+			  
+			  $('html, body').animate({
+				scrollTop: $(hash).offset().top
+			  }, 800, function(){
+				window.location.hash = hash;
+			  });
+			}
+		  });
+		});
+		</script>
+	</head>
+	<body >
+		<!-- HTML Follows BEM naming conventions 
+		IDs are only used for sections to connect menu achors to sections -->
+		
+		<header class="page__header">
+			<nav class="navbar__menu">
+			  <ul id="navbar__list"></ul>
+			</nav>
+		</header>
+		
+		<main>
+		
+			<header class="main__hero">
+				<h1>Truong Market</h1>
+			</header>
+			<div class="place-holder"></div>
+			<section id="section1" data-nav="Real estate" class="your-active-class">
+				<div class="landing__container">
+					<h2>Real estate</h2>
+					<p>The real estate market refers to the buying, selling, and leasing of properties, including residential, commercial, and industrial real estate. It plays a crucial role in the economy, influencing construction, investment, and employment.</p>
+                    <p>Supply and Demand: The balance between available properties and buyers influences prices. High demand with low supply often leads to price increases.</p>
+                    <p>Economic Conditions: Economic growth, employment rates, and interest rates significantly impact the market. Lower interest rates can make borrowing more affordable, boosting home sales.</p>
+                    <p>Location: Properties in desirable areas tend to have higher values. Proximity to amenities, schools, and transportation also affects demand.
+
+                        Government Policies: Zoning laws, tax incentives, and regulations can impact real estate development and investment.</p>
+                </div>
+			</section>
+			
+			<section id="section2" data-nav="Automotive">
+				<div class="landing__container">
+					<h2>Automotive</h2>
+					<p>The automotive market encompasses the buying, selling, and leasing of vehicles, including cars, trucks, motorcycles, and commercial vehicles. This market is a vital component of the global economy and is influenced by various factors.</p>
+
+					<p>Demand and Supply: The balance between vehicle availability and consumer demand directly impacts prices. Economic conditions, consumer preferences, and technological advancements can shift demand.
+
+                        Economic Factors: Economic growth, employment rates, and disposable income levels affect consumers' ability to purchase vehicles. In times of economic downturn, sales may decline.
+                        
+                        Technological Advancements: Innovations such as electric vehicles (EVs), autonomous driving, and smart technology are reshaping the market. Many consumers are increasingly interested in eco-friendly options.</p>
+				</div>
+			</section>
+			
+			<section id="section3" data-nav="Food">
+				<div class="landing__container">
+					<h2>Food</h2>
+					<p>The food market encompasses the production, distribution, and consumption of food products. It includes various sectors such as agriculture, processing, retail, and food service. This market is vital for human sustenance and has a significant impact on the global economy.</p>
+                    <p>Supply and Demand: The availability of food products and consumer demand significantly influence prices. Factors like crop yields, seasonal variations, and consumer trends play a role.</p>
+				    <p>Agricultural Practices: Innovations in farming techniques, such as organic farming and precision agriculture, affect production efficiency and sustainability.</p>
+                </div>
+			</section>
+			
+			<!-- add other section -->
+			<section id="section4" data-nav="Travel">
+				<div class="landing__container">
+					<h2>Travel</h2>
+					<p>The tourism industry encompasses the travel, hospitality, and recreation sectors, focusing on people traveling for leisure, business, or other purposes. It plays a significant role in the global economy and cultural exchange.</p>
+                    <p>Sustainability: There is a growing emphasis on sustainable tourism practices, aiming to minimize environmental impact and support local communities. Eco-friendly accommodations and responsible travel choices are gaining popularity.</p>
+					<p>Cultural Exchange: Tourism facilitates cultural interactions, allowing travelers to experience different customs, traditions, and lifestyles. This exchange can promote understanding and appreciation among diverse communities.</p>
+				</div>
+			</section>
+			
+		</main>
+		
+		<footer class="page__footer">
+			<p>&copy; Truong Market</p>
+		</footer>
+		<script src="js/app.js"></script>
+	</body>
+</html>
